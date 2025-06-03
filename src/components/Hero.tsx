@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Star } from 'lucide-react';
 
 const Hero = () => {
@@ -80,18 +79,36 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Animated bottom banner */}
+      {/* Animated bottom banner with infinite scroll */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <div className="bg-black text-yellow-400 py-4 transform -rotate-1 origin-left">
-          <div className="flex items-center justify-center space-x-8 font-black text-xl animate-pulse">
-            <span>🔥 CRISPY GOODNESS!</span>
-            <span className="w-3 h-3 bg-yellow-400 rounded-full animate-ping"></span>
-            <span>🍗 CHICKEN PARADISE!</span>
-            <span className="w-3 h-3 bg-yellow-400 rounded-full animate-ping"></span>
-            <span>⚡ FLAVOR EXPLOSION!</span>
+          <div className="flex items-center font-black text-xl whitespace-nowrap animate-[scroll_20s_linear_infinite]">
+            <span className="mx-8">🔥 CRISPY GOODNESS!</span>
+            <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
+            <span className="mx-8">🍗 CHICKEN PARADISE!</span>
+            <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
+            <span className="mx-8">⚡ FLAVOR EXPLOSION!</span>
+            <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
+            <span className="mx-8">🔥 CRISPY GOODNESS!</span>
+            <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
+            <span className="mx-8">🍗 CHICKEN PARADISE!</span>
+            <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
+            <span className="mx-8">⚡ FLAVOR EXPLOSION!</span>
+            <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 };
