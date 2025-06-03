@@ -1,4 +1,3 @@
-
 const Menu = () => {
   const menuItems = [
     {
@@ -107,12 +106,47 @@ const Menu = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-yellow-400 text-black py-8 px-6 rounded-3xl transform -rotate-1 shadow-2xl">
-            <h3 className="text-4xl font-black mb-4">🔥 HUNGRY YET? 🔥</h3>
-            <p className="mb-6 font-bold text-lg">These dishes are CALLING your name!</p>
-            <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-black">
-              🚀 LET'S ORDER!
-            </button>
+          <div className="bg-yellow-400 text-black py-8 px-6 rounded-3xl transform -rotate-1 shadow-2xl relative overflow-hidden">
+            {/* Left side chicken image */}
+            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden md:block">
+              <img 
+                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                alt="Crispy Chicken" 
+                className="w-24 h-24 object-cover rounded-full border-4 border-black transform rotate-12 animate-pulse"
+              />
+            </div>
+            
+            {/* Right side chicken image */}
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block">
+              <img 
+                src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                alt="Buffalo Wings" 
+                className="w-24 h-24 object-cover rounded-full border-4 border-black transform -rotate-12 animate-bounce"
+              />
+            </div>
+
+            {/* Additional decorative elements */}
+            <div className="absolute top-4 left-1/4 bg-black text-yellow-400 p-2 rounded-full font-black text-sm animate-spin">
+              🔥
+            </div>
+            <div className="absolute bottom-4 right-1/4 bg-black text-yellow-400 p-2 rounded-full font-black text-sm animate-ping">
+              🍗
+            </div>
+            
+            {/* Main content */}
+            <div className="relative z-10">
+              <h3 className="text-4xl font-black mb-4">🔥 HUNGRY YET? 🔥</h3>
+              <p className="mb-6 font-bold text-lg">These dishes are CALLING your name!</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-black">
+                  🚀 LET'S ORDER!
+                </button>
+                <div className="flex items-center space-x-2">
+                  <span className="text-black font-black text-lg">🌟 5.0 RATING</span>
+                  <span className="text-black font-black text-lg">🚚 FAST DELIVERY</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

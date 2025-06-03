@@ -1,3 +1,4 @@
+
 import { ArrowDown, Zap, Star } from 'lucide-react';
 
 const Hero = () => {
@@ -50,29 +51,37 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Image */}
-          <div className="relative">
-            {/* Multiple background circles for funky effect */}
-            <div className="absolute inset-0 bg-black rounded-full transform scale-110 opacity-80 animate-pulse"></div>
-            <div className="absolute inset-0 bg-white rounded-full transform scale-105 opacity-60 animate-ping"></div>
+          {/* Right side - Image with simple circle backgrounds */}
+          <div className="relative flex justify-center items-center">
+            {/* Simple circle background shapes */}
+            {/* <div className="absolute inset-0 flex justify-center items-center">
+              <div className="w-[550px] h-[550px] bg-black rounded-full opacity-20"></div>
+            </div> */}
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div className="w-[500px] h-[500px] bg-white rounded-full opacity-30"></div>
+            </div>
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div className="w-[450px] h-[450px] bg-yellow-300 rounded-full opacity-40"></div>
+            </div>
             
-            {/* Main image container */}
-            <div className="relative z-10 bg-yellow-400 rounded-full p-4 shadow-2xl transform hover:rotate-6 transition-transform duration-500">
+            {/* Main image container - much bigger */}
+            <div className="relative z-10 transform ">
               <img 
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                alt="Delicious Fried Chicken" 
-                className="w-full h-auto rounded-full object-cover border-8 border-black"
+                src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
+                alt="Delicious Chicken Wings on Wooden Board" 
+                className="w-[45rem] h-[32rem] object-contain"
+                // style={{width: '32rem', height: '32rem'}}
               />
             </div>
 
             {/* Floating elements around the image */}
-            <div className="absolute -top-4 -right-4 bg-black text-yellow-400 p-3 rounded-full font-black text-sm animate-bounce">
+            <div className="absolute -top-4 -right-4 bg-black text-yellow-400 p-3 rounded-full font-black text-sm animate-bounce z-20">
               HOT!
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-white text-black p-3 rounded-full font-black text-sm animate-pulse">
+            <div className="absolute -bottom-4 -left-4 bg-white text-black p-3 rounded-full font-black text-sm animate-pulse z-20">
               FRESH!
             </div>
-            <div className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs transform rotate-12">
+            <div className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs transform rotate-12 z-20">
               YUM!
             </div>
           </div>
@@ -80,7 +89,7 @@ const Hero = () => {
       </div>
 
       {/* Animated bottom banner with infinite scroll */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-full">
         <div className="bg-black text-yellow-400 py-4 transform -rotate-1 origin-left">
           <div className="flex items-center font-black text-xl whitespace-nowrap animate-[scroll_20s_linear_infinite]">
             <span className="mx-8">🔥 CRISPY GOODNESS!</span>
@@ -99,7 +108,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes scroll {
           0% {
             transform: translateX(0);
