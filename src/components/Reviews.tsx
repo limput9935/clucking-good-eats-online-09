@@ -41,33 +41,33 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-600 relative overflow-hidden">
+    <section id="reviews" className="py-20 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
-        <div className="absolute top-16 left-16 w-32 h-32 bg-yellow-300 rounded-full opacity-20 animate-bounce"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-300 rotate-45 opacity-25 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-orange-300 rounded-full opacity-30"></div>
+        <div className="absolute top-16 left-16 w-32 h-32 bg-black rounded-full opacity-20 animate-bounce"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white rotate-45 opacity-25 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-black rounded-full opacity-30"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white text-purple-600 px-6 py-3 rounded-full font-black text-sm mb-4 transform -rotate-2">
-            <Heart className="w-5 h-5 mr-2 text-red-500 animate-pulse" />
+          <div className="inline-flex items-center bg-white text-black px-6 py-3 rounded-full font-black text-sm mb-4 transform -rotate-2">
+            <Heart className="w-5 h-5 mr-2 text-black animate-pulse" />
             CUSTOMER LOVE LETTERS
-            <Heart className="w-5 h-5 ml-2 text-red-500 animate-pulse" />
+            <Heart className="w-5 h-5 ml-2 text-black animate-pulse" />
           </div>
-          <h2 className="text-6xl font-black text-white mb-6 drop-shadow-lg">
+          <h2 className="text-6xl font-black text-black mb-6 drop-shadow-lg">
             <span className="block">PEOPLE ARE</span>
-            <span className="block text-yellow-300 transform rotate-1">GOING CRAZY! 🤯</span>
+            <span className="block text-white transform rotate-1">GOING CRAZY! 🤯</span>
           </h2>
-          <p className="text-xl text-white max-w-2xl mx-auto font-bold">
+          <p className="text-xl text-black max-w-2xl mx-auto font-bold">
             Don't believe us? Check out these WILD reactions from our customers! 
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
-            <div key={review.id} className={`bg-white rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 ${index % 2 === 0 ? 'hover:rotate-2' : 'hover:-rotate-2'} border-4 border-yellow-400`}>
+            <div key={review.id} className={`bg-white rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 ${index % 2 === 0 ? 'hover:rotate-2' : 'hover:-rotate-2'} border-4 border-black`}>
               <div className="flex items-center mb-4">
                 <div className="relative">
                   <img 
@@ -85,8 +85,8 @@ const Reviews = () => {
                     {renderStars(review.rating)}
                   </div>
                   <div className="flex items-center">
-                    <ThumbsUp className="w-4 h-4 text-green-500 mr-1" />
-                    <span className="text-green-600 font-bold text-sm">VERIFIED CRAZY CUSTOMER</span>
+                    <ThumbsUp className="w-4 h-4 text-black mr-1" />
+                    <span className="text-black font-bold text-sm">VERIFIED CRAZY CUSTOMER</span>
                   </div>
                 </div>
               </div>
@@ -98,18 +98,18 @@ const Reviews = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-yellow-400 text-black py-10 px-8 rounded-3xl transform -rotate-1 shadow-2xl border-4 border-black">
+          <div className="bg-black text-yellow-400 py-10 px-8 rounded-3xl transform -rotate-1 shadow-2xl border-4 border-black">
             <div className="text-6xl mb-4 animate-bounce">🎉</div>
             <h3 className="text-4xl font-black mb-4">JOIN THE CHICKEN REVOLUTION!</h3>
             <p className="mb-6 font-bold text-xl">Become part of our CRAZY chicken family!</p>
-            <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-black shadow-lg">
+            <button className="bg-yellow-400 text-black hover:bg-yellow-300 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-yellow-400 shadow-lg">
               🚀 GET MY CHICKEN FIX!
             </button>
             <div className="mt-6 flex justify-center space-x-4">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-full font-black text-sm transform rotate-6">
+              <div className="bg-white text-black px-4 py-2 rounded-full font-black text-sm transform rotate-6">
                 💯 SATISFACTION GUARANTEED!
               </div>
-              <div className="bg-green-500 text-white px-4 py-2 rounded-full font-black text-sm transform -rotate-6">
+              <div className="bg-yellow-400 text-black px-4 py-2 rounded-full font-black text-sm transform -rotate-6">
                 🔥 FLAVOR EXPLOSION!
               </div>
             </div>

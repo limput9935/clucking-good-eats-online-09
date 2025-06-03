@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
@@ -20,29 +20,29 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-yellow-400">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-orange-400 transition-colors">Home</a></li>
-              <li><a href="#menu" className="text-gray-300 hover:text-orange-400 transition-colors">Menu</a></li>
-              <li><a href="#gallery" className="text-gray-300 hover:text-orange-400 transition-colors">Gallery</a></li>
-              <li><a href="#reviews" className="text-gray-300 hover:text-orange-400 transition-colors">Reviews</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-yellow-400 transition-colors">Home</a></li>
+              <li><a href="#menu" className="text-gray-300 hover:text-yellow-400 transition-colors">Menu</a></li>
+              <li><a href="#gallery" className="text-gray-300 hover:text-yellow-400 transition-colors">Gallery</a></li>
+              <li><a href="#reviews" className="text-gray-300 hover:text-yellow-400 transition-colors">Reviews</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <h3 className="text-lg font-semibold mb-4 text-yellow-400">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center">
-                <MapPin size={18} className="text-orange-400 mr-3" />
+                <MapPin size={18} className="text-yellow-400 mr-3" />
                 <span className="text-gray-300">123 Chicken Street, Food City</span>
               </div>
               <div className="flex items-center">
-                <Phone size={18} className="text-orange-400 mr-3" />
+                <Phone size={18} className="text-yellow-400 mr-3" />
                 <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center">
-                <Mail size={18} className="text-orange-400 mr-3" />
+                <Mail size={18} className="text-yellow-400 mr-3" />
                 <span className="text-gray-300">info@hfcrestaurant.com</span>
               </div>
             </div>
@@ -50,10 +50,10 @@ const Footer = () => {
 
           {/* Opening Hours */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Opening Hours</h3>
+            <h3 className="text-lg font-semibold mb-4 text-yellow-400">Opening Hours</h3>
             <div className="space-y-2">
               <div className="flex items-center">
-                <Clock size={18} className="text-orange-400 mr-3" />
+                <Clock size={18} className="text-yellow-400 mr-3" />
                 <div className="text-gray-300">
                   <p>Mon - Thu: 11am - 10pm</p>
                   <p>Fri - Sat: 11am - 11pm</p>

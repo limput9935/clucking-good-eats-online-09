@@ -52,22 +52,22 @@ const Menu = () => {
   ];
 
   return (
-    <section id="menu" className="py-20 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 relative overflow-hidden">
+    <section id="menu" className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full opacity-20 animate-bounce"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-blue-300 rounded-full opacity-30 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-300 rotate-45 opacity-25"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 animate-bounce"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full opacity-30 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-yellow-400 rotate-45 opacity-25"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block bg-black text-yellow-400 px-6 py-2 rounded-full font-black text-sm mb-4 transform -rotate-2">
+          <div className="inline-block bg-yellow-400 text-black px-6 py-2 rounded-full font-black text-sm mb-4 transform -rotate-2">
             🍗 MENU MADNESS 🍗
           </div>
           <h2 className="text-6xl font-black text-white mb-6 drop-shadow-lg">
             <span className="block">OUR CRAZY</span>
-            <span className="block text-yellow-300 transform rotate-1">CHICKEN MENU!</span>
+            <span className="block text-yellow-400 transform rotate-1">CHICKEN MENU!</span>
           </h2>
           <p className="text-xl text-white max-w-2xl mx-auto font-bold">
             Get ready for the WILDEST chicken dishes that'll make your taste buds DANCE! 💃🕺
@@ -76,7 +76,7 @@ const Menu = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {menuItems.map((item, index) => (
-            <div key={item.id} className={`bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 hover:rotate-2 transition-all duration-300 border-4 ${index % 2 === 0 ? 'border-yellow-400' : 'border-pink-400'}`}>
+            <div key={item.id} className={`bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 hover:rotate-2 transition-all duration-300 border-4 ${index % 2 === 0 ? 'border-yellow-400' : 'border-black'}`}>
               <div className="relative overflow-hidden">
                 <img 
                   src={item.image} 
@@ -86,18 +86,18 @@ const Menu = () => {
                 <div className="absolute top-4 left-4 bg-black text-yellow-400 p-2 rounded-full font-black text-2xl animate-bounce">
                   {item.emoji}
                 </div>
-                <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full font-black text-sm transform rotate-12">
+                <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-sm transform rotate-12">
                   POPULAR!
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-black text-gray-800 leading-tight">{item.name}</h3>
-                  <span className="text-2xl font-black text-orange-600 bg-yellow-100 px-3 py-1 rounded-full transform -rotate-6">{item.price}</span>
+                  <span className="text-2xl font-black text-black bg-yellow-400 px-3 py-1 rounded-full transform -rotate-6">{item.price}</span>
                 </div>
                 <p className="text-gray-600 mb-6 font-semibold">{item.description}</p>
                 <div className="text-center">
-                  <div className="bg-gradient-to-r from-orange-400 to-pink-500 text-white py-3 px-6 rounded-full font-black text-lg transform hover:scale-105 transition-all duration-200 cursor-pointer">
+                  <div className="bg-gradient-to-r from-black to-gray-800 text-yellow-400 py-3 px-6 rounded-full font-black text-lg transform hover:scale-105 transition-all duration-200 cursor-pointer">
                     😋 LOOKS DELICIOUS!
                   </div>
                 </div>
