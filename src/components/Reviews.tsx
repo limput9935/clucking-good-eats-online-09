@@ -30,7 +30,7 @@ const Reviews = () => {
       id: 4,
       name: "Alex P.",
       rating: 5,
-      comment: "Best fried chicken in the area! Worth the short drive from Osler."
+      comment: "Best fried chicken in the area!"
     },
     {
       id: 5,
@@ -82,7 +82,7 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 relative overflow-hidden">
+    <section id="reviews" className="py-20 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 relative overflow-hidden w-full">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-16 left-16 w-32 h-32 bg-black rounded-full opacity-20 animate-bounce"></div>
@@ -90,7 +90,7 @@ const Reviews = () => {
         <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-black rounded-full opacity-30"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={headerRef} className={`text-center mb-16 transition-all duration-1000 ${
           headerVisible 
             ? 'opacity-100 transform translate-y-0' 
@@ -110,7 +110,7 @@ const Reviews = () => {
           </p>
         </div>
 
-        {/* Horizontal Infinite Auto Scroll */}
+        {/* Horizontal Infinite Auto Scroll - Full Width */}
         <div ref={reviewsRef} className={`relative w-full overflow-x-hidden transition-all duration-1000 delay-300 ${
           reviewsVisible 
             ? 'opacity-100 transform translate-y-0' 
@@ -145,7 +145,7 @@ const Reviews = () => {
           </div>
         </div>
 
-        <div ref={ctaRef} className={`text-center mt-16 transition-all duration-1000 delay-600 ${
+        <div ref={ctaRef} className={`text-center mt-16 transition-all duration-1000 delay-600 max-w-4xl mx-auto ${
           ctaVisible 
             ? 'opacity-100 transform translate-y-0' 
             : 'opacity-0 transform translate-y-10'
