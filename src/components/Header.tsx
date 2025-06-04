@@ -6,11 +6,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home', emoji: '🏠' },
-    { name: 'Menu', href: '#menu', emoji: '🍗' },
-    { name: 'Gallery', href: '#gallery', emoji: '📸' },
-    { name: 'Reviews', href: '#reviews', emoji: '⭐' },
-    { name: 'Contact', href: '#footer', emoji: '📞' },
+    { name: 'Home', href: '#home' },
+    { name: 'Menu', href: '#menu' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Reviews', href: '#reviews' },
+    { name: 'Contact', href: '#footer' },
   ];
 
   return (
@@ -40,7 +40,6 @@ const Header = () => {
                 href={item.href}
                 className="bg-yellow-400 text-black hover:bg-white hover:text-black px-4 py-2 rounded-full font-black text-sm transition-all duration-300 transform hover:scale-110 hover:rotate-3 border-2 border-yellow-400 shadow-lg"
               >
-                <span className="mr-1">{item.emoji}</span>
                 {item.name}
               </a>
             ))}
@@ -68,7 +67,6 @@ const Header = () => {
                   className="block bg-black text-yellow-400 hover:bg-white hover:text-black px-4 py-3 rounded-full font-black text-center transition-all duration-300 transform hover:scale-105"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="mr-2">{item.emoji}</span>
                   {item.name}
                 </a>
               ))}

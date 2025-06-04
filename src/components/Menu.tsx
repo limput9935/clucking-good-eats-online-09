@@ -1,51 +1,46 @@
+
 const Menu = () => {
   const menuItems = [
     {
       id: 1,
       name: "CRISPY BOMB CHICKEN",
-      description: "💥 Golden crispy chicken pieces with our SECRET spice blend that'll blow your mind!",
+      description: "Golden crispy chicken pieces with our SECRET spice blend that'll blow your mind!",
       price: "$12.99",
-      emoji: "🔥",
       image: "https://www.licious.in/blog/wp-content/uploads/2019/05/Drumsticks-liquidation-plan-05.jpg"
     },
     {
       id: 2,
       name: "BUFFALO BEAST WINGS",
-      description: "🌶️ Spicy buffalo wings that pack a PUNCH! Served with our legendary ranch sauce",
+      description: "Spicy buffalo wings that pack a PUNCH! Served with our legendary ranch sauce",
       price: "$9.99",
-      emoji: "💀",
       image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
     {
       id: 3,
       name: "TENDER MADNESS STRIPS",
-      description: "⚡ Tender chicken strips breaded with INSANE crunch factor - you'll be addicted!",
+      description: "Tender chicken strips breaded with INSANE crunch factor - you'll be addicted!",
       price: "$8.99",
-      emoji: "⭐",
       image: "https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
     {
       id: 4,
       name: "GRILLED PERFECTION",
-      description: "🌿 Juicy grilled chicken breast with herbs that'll transport you to FLAVOR TOWN!",
+      description: "Juicy grilled chicken breast with herbs that'll transport you to FLAVOR TOWN!",
       price: "$14.99",
-      emoji: "🏆",
       image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
     {
       id: 5,
       name: "CHICKEN BURGER BEAST",
-      description: "🍔 Crispy chicken patty stacked HIGH with fresh goodies - it's a MONSTER!",
+      description: "Crispy chicken patty stacked HIGH with fresh goodies - it's a MONSTER!",
       price: "$10.99",
-      emoji: "🦁",
       image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
     {
       id: 6,
       name: "BBQ SMOKY DEMONS",
-      description: "😈 Smoky BBQ glazed wings with a tangy kick that'll haunt your dreams!",
+      description: "Smoky BBQ glazed wings with a tangy kick that'll haunt your dreams!",
       price: "$11.99",
-      emoji: "🔥",
       image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     }
   ];
@@ -62,14 +57,14 @@ const Menu = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block bg-yellow-400 text-black px-6 py-2 rounded-full font-black text-sm mb-4 transform -rotate-2">
-            🍗 MENU MADNESS 🍗
+            MENU MADNESS
           </div>
           <h2 className="text-6xl font-black text-white mb-6 drop-shadow-lg">
             <span className="block">OUR CRAZY</span>
             <span className="block text-yellow-400 transform rotate-1">CHICKEN MENU!</span>
           </h2>
           <p className="text-xl text-white max-w-2xl mx-auto font-bold">
-            Get ready for the WILDEST chicken dishes that'll make your taste buds DANCE! 💃🕺
+            Get ready for the WILDEST chicken dishes that'll make your taste buds DANCE!
           </p>
         </div>
 
@@ -82,9 +77,6 @@ const Menu = () => {
                   alt={item.name}
                   className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute top-4 left-4 bg-black text-yellow-400 p-2 rounded-full font-black text-2xl animate-bounce">
-                  {item.emoji}
-                </div>
                 <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-sm transform rotate-12">
                   POPULAR!
                 </div>
@@ -97,7 +89,7 @@ const Menu = () => {
                 <p className="text-gray-600 mb-6 font-semibold">{item.description}</p>
                 <div className="text-center">
                   <div className="bg-gradient-to-r from-black to-gray-800 text-yellow-400 py-3 px-6 rounded-full font-black text-lg transform hover:scale-105 transition-all duration-200 cursor-pointer">
-                    😋 LOOKS DELICIOUS!
+                    LOOKS DELICIOUS!
                   </div>
                 </div>
               </div>
@@ -124,26 +116,18 @@ const Menu = () => {
                 className="w-24 h-24 object-cover rounded-full border-4 border-black transform -rotate-12 animate-bounce"
               />
             </div>
-
-            {/* Additional decorative elements */}
-            <div className="absolute top-4 left-1/4 bg-black text-yellow-400 p-2 rounded-full font-black text-sm animate-spin">
-              🔥
-            </div>
-            <div className="absolute bottom-4 right-1/4 bg-black text-yellow-400 p-2 rounded-full font-black text-sm animate-ping">
-              🍗
-            </div>
             
             {/* Main content */}
             <div className="relative z-10">
-              <h3 className="text-4xl font-black mb-4">🔥 HUNGRY YET? 🔥</h3>
+              <h3 className="text-4xl font-black mb-4">HUNGRY YET?</h3>
               <p className="mb-6 font-bold text-lg">These dishes are CALLING your name!</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-black">
-                  🚀 LET'S ORDER!
+                  LET'S ORDER!
                 </button>
                 <div className="flex items-center space-x-2">
-                  <span className="text-black font-black text-lg">🌟 5.0 RATING</span>
-                  <span className="text-black font-black text-lg">🚚 FAST DELIVERY</span>
+                  <span className="text-black font-black text-lg">5.0 RATING</span>
+                  <span className="text-black font-black text-lg">FAST DELIVERY</span>
                 </div>
               </div>
             </div>

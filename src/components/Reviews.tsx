@@ -1,3 +1,4 @@
+
 import { Star, Heart } from 'lucide-react';
 
 const Reviews = () => {
@@ -6,7 +7,7 @@ const Reviews = () => {
       id: 1,
       name: "Sarah K",
       rating: 5,
-      comment: "Ordered Hot Chicken for the first time and it was delicious! The yam fries were yummy too. We’ll definitely order again and try more flavours.",
+      comment: "Ordered Hot Chicken for the first time and it was delicious! The yam fries were yummy too. We'll definitely order again and try more flavours.",
       location: "Saskatoon, Canada"
     },
     {
@@ -20,7 +21,7 @@ const Reviews = () => {
       id: 3,
       name: "Yuki L.",
       rating: 5,
-      comment: "I've found my HAPPY PLACE! The chicken tenders are LIFE-CHANGING! My family thinks I'm crazy but WHO CARES?! 🤪⚡",
+      comment: "I've found my HAPPY PLACE! The chicken tenders are LIFE-CHANGING! My family thinks I'm crazy but WHO CARES?!",
       location: "Warman, Canada"
     },
     {
@@ -62,7 +63,7 @@ const Reviews = () => {
       id: 9,
       name: "Linda G.",
       rating: 5,
-      comment: "My kids LOVED the popcorn chicken. We’ll be back every week!",
+      comment: "My kids LOVED the popcorn chicken. We'll be back every week!",
       location: "Osler, Canada"
     },
     {
@@ -144,18 +145,17 @@ const Reviews = () => {
 
         <div className="text-center mt-16">
           <div className="bg-black text-yellow-400 py-10 px-8 rounded-3xl transform -rotate-1 shadow-2xl border-4 border-black">
-            <div className="text-6xl mb-4 animate-bounce">🎉</div>
             <h3 className="text-4xl font-black mb-4">JOIN THE CHICKEN REVOLUTION!</h3>
             <p className="mb-6 font-bold text-xl">Become part of our CRAZY chicken family!</p>
             <button className="bg-yellow-400 text-black hover:bg-yellow-300 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-yellow-400 shadow-lg">
-              🚀 GET MY CHICKEN FIX!
+              GET MY CHICKEN FIX!
             </button>
             <div className="mt-6 flex justify-center space-x-4">
               <div className="bg-white text-black px-4 py-2 rounded-full font-black text-sm transform rotate-6">
-                💯 SATISFACTION GUARANTEED!
+                SATISFACTION GUARANTEED!
               </div>
               <div className="bg-yellow-400 text-black px-4 py-2 rounded-full font-black text-sm transform -rotate-6">
-                🔥 FLAVOR EXPLOSION!
+                FLAVOR EXPLOSION!
               </div>
             </div>
           </div>

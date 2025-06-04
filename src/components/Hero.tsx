@@ -39,8 +39,57 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left">
+          {/* Left side - Image with parallax effect */}
+          <div className="relative flex justify-center items-center order-2 lg:order-1">
+            {/* Circle backgrounds with parallax */}
+            <div 
+              className="absolute inset-0 flex justify-center items-center"
+              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+            >
+              <div className="w-[600px] h-[600px] bg-white rounded-full opacity-30"></div>
+            </div>
+            <div 
+              className="absolute inset-0 flex justify-center items-center"
+              style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+            >
+              <div className="w-[550px] h-[550px] bg-yellow-300 rounded-full opacity-40"></div>
+            </div>
+            
+            {/* Main image container with parallax */}
+            <div 
+              className="relative z-10 transform animate-float"
+              style={{ transform: `translateY(${scrollY * 0.05}px)` }}
+            >
+              <img 
+                src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
+                alt="Delicious Chicken Wings on Wooden Board" 
+                className="w-[55rem] h-[40rem] object-contain"
+              />
+            </div>
+
+            {/* Floating elements with parallax */}
+            <div 
+              className="absolute -top-4 -right-4 bg-black text-yellow-400 p-3 rounded-full font-black text-sm animate-bounce z-20"
+              style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+            >
+              HOT!
+            </div>
+            <div 
+              className="absolute -bottom-4 -left-4 bg-white text-black p-3 rounded-full font-black text-sm animate-pulse z-20"
+              style={{ transform: `translateY(${-scrollY * 0.15}px)` }}
+            >
+              FRESH!
+            </div>
+            <div 
+              className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs transform rotate-12 z-20"
+              style={{ transform: `translateY(${scrollY * 0.1}px) rotate(12deg)` }}
+            >
+              YUM!
+            </div>
+          </div>
+
+          {/* Right side - Text content */}
+          <div className="text-center lg:text-left order-1 lg:order-2">
             <div className="flex items-center justify-center lg:justify-start mb-4 animate-fade-in">
               <Zap className="text-black w-8 h-8 mr-2 animate-bounce" />
               <span className="bg-black text-yellow-400 px-4 py-1 rounded-full font-bold text-sm transform -rotate-2 animate-scale-in">
@@ -71,10 +120,10 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
               <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:rotate-2">
-                🍗 EXPLORE MENU
+                EXPLORE MENU
               </a>
               <a href='https://www.clover.com/online-ordering/hfcyxe' className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:-rotate-2 border-4 border-black">
-                ⚡ ORDER NOW!
+                ORDER NOW!
               </a>
             </div>
 
@@ -83,55 +132,6 @@ const Hero = () => {
                 <Star key={i} className="w-6 h-6 text-black fill-current animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />
               ))}
               <span className="text-black font-bold ml-2">5.0 INSANE RATING!</span>
-            </div>
-          </div>
-
-          {/* Right side - Image with parallax effect */}
-          <div className="relative flex justify-center items-center">
-            {/* Circle backgrounds with parallax */}
-            <div 
-              className="absolute inset-0 flex justify-center items-center"
-              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
-            >
-              <div className="w-[500px] h-[500px] bg-white rounded-full opacity-30"></div>
-            </div>
-            <div 
-              className="absolute inset-0 flex justify-center items-center"
-              style={{ transform: `translateY(${scrollY * 0.15}px)` }}
-            >
-              <div className="w-[450px] h-[450px] bg-yellow-300 rounded-full opacity-40"></div>
-            </div>
-            
-            {/* Main image container with parallax */}
-            <div 
-              className="relative z-10 transform animate-float"
-              style={{ transform: `translateY(${scrollY * 0.05}px)` }}
-            >
-              <img 
-                src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
-                alt="Delicious Chicken Wings on Wooden Board" 
-                className="w-[45rem] h-[32rem] object-contain"
-              />
-            </div>
-
-            {/* Floating elements with parallax */}
-            <div 
-              className="absolute -top-4 -right-4 bg-black text-yellow-400 p-3 rounded-full font-black text-sm animate-bounce z-20"
-              style={{ transform: `translateY(${scrollY * 0.2}px)` }}
-            >
-              HOT!
-            </div>
-            <div 
-              className="absolute -bottom-4 -left-4 bg-white text-black p-3 rounded-full font-black text-sm animate-pulse z-20"
-              style={{ transform: `translateY(${-scrollY * 0.15}px)` }}
-            >
-              FRESH!
-            </div>
-            <div 
-              className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs transform rotate-12 z-20"
-              style={{ transform: `translateY(${scrollY * 0.1}px) rotate(12deg)` }}
-            >
-              YUM!
             </div>
           </div>
         </div>
@@ -144,17 +144,17 @@ const Hero = () => {
       >
         <div className="bg-black text-yellow-400 py-4 transform -rotate-1 origin-left">
           <div className="flex items-center font-black text-xl whitespace-nowrap animate-[scroll_20s_linear_infinite]">
-            <span className="mx-8">🔥 CRISPY GOODNESS!</span>
+            <span className="mx-8">CRISPY GOODNESS!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
-            <span className="mx-8">🍗 CHICKEN PARADISE!</span>
+            <span className="mx-8">CHICKEN PARADISE!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
-            <span className="mx-8">⚡ FLAVOR EXPLOSION!</span>
+            <span className="mx-8">FLAVOR EXPLOSION!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
-            <span className="mx-8">🔥 CRISPY GOODNESS!</span>
+            <span className="mx-8">CRISPY GOODNESS!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
-            <span className="mx-8">🍗 CHICKEN PARADISE!</span>
+            <span className="mx-8">CHICKEN PARADISE!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
-            <span className="mx-8">⚡ FLAVOR EXPLOSION!</span>
+            <span className="mx-8">FLAVOR EXPLOSION!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>
           </div>
         </div>
