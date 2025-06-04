@@ -62,7 +62,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
                 alt="Delicious Chicken Wings on Wooden Board" 
-                className="w-[80rem] h-[60rem] object-contain max-w-none"
+                className="w-[57rem] h-[32rem] object-contain max-w-none"
               />
             </div>
 
@@ -79,12 +79,12 @@ const Hero = () => {
             >
               FRESH!
             </div>
-            <div 
+            {/* <div 
               className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs z-20"
               style={{ transform: `translateY(${scrollY * 0.1}px)` }}
             >
               YUM!
-            </div>
+            </div> */}
           </div>
 
           {/* Right side - Text content */}
