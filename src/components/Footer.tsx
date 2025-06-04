@@ -35,11 +35,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <MapPin size={18} className="text-yellow-400 mr-3" />
-                <span className="text-gray-300">123 Chicken Street, Food City</span>
+                <span className="text-gray-300">527 NELSON RD, SASKATOON SK</span>
               </div>
               <div className="flex items-center">
                 <Phone size={18} className="text-yellow-400 mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">(306) 978-7778</span>
               </div>
               <div className="flex items-center">
                 <Mail size={18} className="text-yellow-400 mr-3" />
