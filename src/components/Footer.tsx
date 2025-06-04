@@ -52,12 +52,37 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-yellow-400">Opening Hours</h3>
             <div className="space-y-2">
-              <div className="flex items-center">
-                <Clock size={18} className="text-yellow-400 mr-3" />
-                <div className="text-gray-300">
-                  <p>Mon - Thu: 11am - 10pm</p>
-                  <p>Fri - Sat: 11am - 11pm</p>
-                  <p>Sunday: 12pm - 9pm</p>
+              <div className="flex items-start">
+                <Clock size={18} className="text-yellow-400 mr-3 mt-1" />
+                <div className="text-gray-300 text-sm">
+                  <div className="flex justify-between mb-1">
+                    <span>Sunday</span>
+                    <span>10:30 a.m. - 10:30 p.m.</span>
+                  </div>
+                  <div className="flex justify-between mb-1">
+                    <span>Monday</span>
+                    <span>10:30 a.m. - 8:30 p.m.</span>
+                  </div>
+                  <div className="flex justify-between mb-1">
+                    <span>Tuesday</span>
+                    <span>10:30 a.m. - 8:30 p.m.</span>
+                  </div>
+                  <div className="flex justify-between mb-1">
+                    <span>Wednesday</span>
+                    <span>10:30 a.m. - 11:00 p.m.</span>
+                  </div>
+                  <div className="flex justify-between mb-1">
+                    <span className="font-semibold">Thursday</span>
+                    <span className="font-semibold">10:30 a.m. - 11:00 p.m.</span>
+                  </div>
+                  <div className="flex justify-between mb-1">
+                    <span>Friday</span>
+                    <span>10:30 a.m. - 10:00 p.m.</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday</span>
+                    <span>10:30 a.m. - 11:00 p.m.</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,7 +91,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 HFC Restaurant. All rights reserved. Made with ❤️ for chicken lovers.
+            © 2024 HFC Restaurant. All rights reserved. Made with love for chicken lovers.
           </p>
         </div>
       </div>
