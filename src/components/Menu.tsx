@@ -97,36 +97,82 @@ const Menu = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-yellow-400 text-black py-8 px-6 rounded-3xl shadow-2xl relative overflow-hidden">
-            {/* Left side chicken image */}
-            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden md:block">
-              <img 
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                alt="Crispy Chicken" 
-                className="w-24 h-24 object-cover rounded-full border-4 border-black transform rotate-12 animate-pulse"
-              />
+          <div className="bg-yellow-400 text-black py-12 px-6 rounded-3xl shadow-2xl relative overflow-hidden">
+            {/* Enhanced decorative elements */}
+            
+            {/* Bottom left decorative section */}
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-black opacity-10 rounded-tr-full"></div>
+            <div className="absolute bottom-6 left-6 flex flex-col space-y-2">
+              <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center transform rotate-12 animate-bounce">
+                <span className="text-yellow-400 text-2xl">🔥</span>
+              </div>
+              <div className="bg-black text-yellow-400 px-3 py-1 rounded-full text-xs font-black transform -rotate-12">
+                HOT & FRESH!
+              </div>
+            </div>
+
+            {/* Bottom right decorative section */}
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-black opacity-10 rounded-tl-full"></div>
+            <div className="absolute bottom-6 right-6 flex flex-col items-end space-y-2">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
+                    <span className="text-yellow-400 text-sm">⭐</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-black text-yellow-400 px-3 py-1 rounded-full text-xs font-black transform rotate-12">
+                5 STAR RATED!
+              </div>
+            </div>
+
+            {/* Top decorative elements */}
+            <div className="absolute top-4 left-1/4 w-8 h-8 bg-black rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute top-4 right-1/4 w-6 h-6 bg-black rounded-full opacity-30 animate-bounce"></div>
+            
+            {/* Floating elements */}
+            <div className="absolute top-8 left-16 transform rotate-45">
+              <div className="w-4 h-4 bg-black opacity-25"></div>
+            </div>
+            <div className="absolute top-8 right-16 transform -rotate-45">
+              <div className="w-4 h-4 bg-black opacity-25"></div>
             </div>
             
-            {/* Right side chicken image */}
-            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:block">
-              <img 
-                src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                alt="Buffalo Wings" 
-                className="w-24 h-24 object-cover rounded-full border-4 border-black transform -rotate-12 animate-bounce"
-              />
-            </div>
-            
-            {/* Main content */}
-            <div className="relative z-10">
-              <h3 className="text-4xl font-black mb-4">HUNGRY YET?</h3>
-              <p className="mb-6 font-bold text-lg">These dishes are CALLING your name!</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 border-4 border-black">
-                  LET'S ORDER!
+            {/* Main content with enhanced spacing */}
+            <div className="relative z-10 pt-6 pb-8">
+              <h3 className="text-5xl font-black mb-6 drop-shadow-lg">HUNGRY YET?</h3>
+              <p className="mb-8 font-bold text-xl max-w-md mx-auto leading-relaxed">
+                These dishes are CALLING your name! Join thousands of happy customers!
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button className="bg-black text-yellow-400 hover:bg-gray-800 px-16 py-5 rounded-full font-black text-2xl transition-all duration-300 transform hover:scale-110 border-4 border-black shadow-xl hover:shadow-2xl">
+                  LET'S ORDER NOW!
                 </button>
-                <div className="flex items-center space-x-2">
-                  <span className="text-black font-black text-lg">5.0 RATING</span>
-                  <span className="text-black font-black text-lg">FAST DELIVERY</span>
+                
+                <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                  <div className="bg-black text-yellow-400 px-4 py-2 rounded-full font-black text-sm transform hover:scale-105 transition-all">
+                    ⚡ FAST DELIVERY
+                  </div>
+                  <div className="bg-black text-yellow-400 px-4 py-2 rounded-full font-black text-sm transform hover:scale-105 transition-all">
+                    💯 SATISFACTION GUARANTEED
+                  </div>
+                </div>
+              </div>
+              
+              {/* Additional trust signals */}
+              <div className="mt-8 flex justify-center space-x-8 text-black font-bold">
+                <div className="text-center">
+                  <div className="text-3xl font-black">1000+</div>
+                  <div className="text-sm">HAPPY CUSTOMERS</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-black">30MIN</div>
+                  <div className="text-sm">DELIVERY TIME</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-black">24/7</div>
+                  <div className="text-sm">AVAILABLE</div>
                 </div>
               </div>
             </div>
