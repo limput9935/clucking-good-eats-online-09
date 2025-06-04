@@ -30,17 +30,17 @@ const Hero = () => {
               <span className="block text-white transform rotate-1">MADNESS!</span>
             </h1>
             
-            <p className="text-xl text-black mb-8 max-w-md mx-auto lg:mx-0 font-semibold">
+            {/* <p className="text-xl text-black mb-8 max-w-md mx-auto lg:mx-0 font-semibold">
               🔥 The WILDEST chicken experience in town! Get ready for flavor explosions! 🔥
-            </p>
+            </p> */}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-black hover:bg-gray-800 text-yellow-400 px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:rotate-2">
+              <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:rotate-2">
                 🍗 EXPLORE MENU
-              </button>
-              <button className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:-rotate-2 border-4 border-black">
+              </a>
+              <a href='https://www.clover.com/online-ordering/hfcyxe' className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:-rotate-2 border-4 border-black">
                 ⚡ ORDER NOW!
-              </button>
+              </a>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start mt-8 space-x-2">
