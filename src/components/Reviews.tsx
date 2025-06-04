@@ -6,71 +6,61 @@ const Reviews = () => {
       id: 1,
       name: "Sarah K",
       rating: 5,
-      comment: "Ordered Hot Chicken for the first time and it was delicious! The yam fries were yummy too. We'll definitely order again and try more flavours.",
-      location: "Saskatoon, Canada"
+      comment: "Ordered Hot Chicken for the first time and it was delicious! The yam fries were yummy too. We'll definitely order again and try more flavours."
     },
     {
       id: 2,
       name: "Mike R",
       rating: 5,
-      comment: "DUDE! These buffalo wings are from another PLANET! My taste buds are still dancing",
-      location: "Martensville, Canada"
+      comment: "DUDE! These buffalo wings are from another PLANET! My taste buds are still dancing"
     },
     {
       id: 3,
       name: "Yuki L.",
       rating: 5,
-      comment: "I've found my HAPPY PLACE! The chicken tenders are LIFE-CHANGING! My family thinks I'm crazy but WHO CARES?!",
-      location: "Warman, Canada"
+      comment: "I've found my HAPPY PLACE! The chicken tenders are LIFE-CHANGING! My family thinks I'm crazy but WHO CARES?!"
     },
     {
       id: 4,
       name: "Alex P.",
       rating: 5,
-      comment: "Best fried chicken in the area! Worth the short drive from Osler.",
-      location: "Osler, Canada"
+      comment: "Best fried chicken in the area! Worth the short drive from Osler."
     },
     {
       id: 5,
       name: "Priya S.",
       rating: 5,
-      comment: "Super crispy and juicy! The honey garlic sauce is a must-try. Delivery was quick too.",
-      location: "Saskatoon, Canada"
+      comment: "Super crispy and juicy! The honey garlic sauce is a must-try. Delivery was quick too."
     },
     {
       id: 6,
       name: "Jordan T.",
       rating: 5,
-      comment: "The Nashville Hot is the real deal! Spicy, crunchy, and addictive. 10/10 would recommend.",
-      location: "Martensville, Canada"
+      comment: "The Nashville Hot is the real deal! Spicy, crunchy, and addictive. 10/10 would recommend."
     },
     {
       id: 7,
       name: "Emily W.",
       rating: 5,
-      comment: "I can't stop thinking about the loaded fries. Portions are generous and the staff is super friendly!",
-      location: "Warman, Canada"
+      comment: "I can't stop thinking about the loaded fries. Portions are generous and the staff is super friendly!"
     },
     {
       id: 8,
       name: "Carlos M.",
       rating: 5,
-      comment: "Great value for money. The chicken sandwich was massive and packed with flavor.",
-      location: "Saskatoon, Canada"
+      comment: "Great value for money. The chicken sandwich was massive and packed with flavor."
     },
     {
       id: 9,
       name: "Linda G.",
       rating: 5,
-      comment: "My kids LOVED the popcorn chicken. We'll be back every week!",
-      location: "Osler, Canada"
+      comment: "My kids LOVED the popcorn chicken. We'll be back every week!"
     },
     {
       id: 10,
       name: "Samir D.",
       rating: 5,
-      comment: "Absolutely blown away by the taste and crunch. This place is a hidden gem!",
-      location: "Martensville, Canada"
+      comment: "Absolutely blown away by the taste and crunch. This place is a hidden gem!"
     }
   ];
 
@@ -128,7 +118,6 @@ const Reviews = () => {
                 <div className="flex items-center mb-4">
                   <div className="ml-4 flex-1">
                     <h3 className="font-black text-gray-800 text-lg">{review.name}</h3>
-                    <span className="text-black font-bold text-sm">{review.location}</span>
                     <div className="flex mb-2">
                       {renderStars(review.rating)}
                     </div>
