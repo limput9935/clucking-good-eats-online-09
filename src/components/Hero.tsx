@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -37,7 +36,7 @@ const Hero = () => {
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-20 lg:pb-0">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Text content - order-1 on mobile (top), order-2 on desktop (right) */}
@@ -88,7 +87,7 @@ const Hero = () => {
           </div>
 
           {/* Image section - order-2 on mobile (bottom), order-1 on desktop (left) */}
-          <div className="relative flex justify-center items-center order-2 lg:order-1">
+          <div className="relative flex justify-center items-center order-2 lg:order-1 mb-8 lg:mb-0">
             {/* Circle backgrounds with parallax */}
             <div 
               className="absolute inset-0 flex justify-center items-center"
@@ -114,7 +113,7 @@ const Hero = () => {
               />
             </div>
 
-            {/* Mobile image - shown only on mobile */}
+            {/* Mobile image - shown only on mobile with reduced size */}
             <div 
               className="relative z-10 transform animate-float block lg:hidden"
               style={{ transform: `translateY(${scrollY * 0.05}px)` }}
@@ -122,7 +121,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
                 alt="Delicious Chicken Wings on Wooden Board" 
-                className="w-full h-auto max-w-[400px] object-contain"
+                className="w-full h-auto max-w-[300px] object-contain"
               />
             </div>
 
@@ -150,7 +149,7 @@ const Hero = () => {
       </div>
 
       {/* Static bottom banner */}
-      <div className="absolute bottom-0 left-0 w-full">
+      <div className="absolute bottom-0 left-0 w-full z-20">
         <div className="bg-black text-yellow-400 py-4">
           <div className="flex items-center font-black text-xl whitespace-nowrap animate-[scroll_20s_linear_infinite]">
             <span className="mx-8">CRISPY GOODNESS!</span>
