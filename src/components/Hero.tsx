@@ -1,3 +1,4 @@
+
 import { ArrowDown, Zap, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -38,57 +39,9 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Image with larger size */}
-          <div className="relative flex justify-center items-center order-1 lg:order-1">
-            {/* Circle backgrounds with parallax */}
-            <div 
-              className="absolute inset-0 flex justify-center items-center"
-              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
-            >
-              {/* <div className="w-[700px] h-[800px] bg-white rounded-full opacity-30"></div> */}
-            </div>
-            <div 
-              className="absolute inset-0 flex justify-center items-center"
-              style={{ transform: `translateY(${scrollY * 0.15}px)` }}
-            >
-              <div className="w-[750px] h-[568px] bg-yellow-300 rounded-full opacity-55"></div>
-            </div>
-            
-            {/* Main image container with much larger size */}
-            <div 
-              className="relative z-10 transform animate-float"
-              style={{ transform: `translateY(${scrollY * 0.05}px)` }}
-            >
-              <img 
-                src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
-                alt="Delicious Chicken Wings on Wooden Board" 
-                className="w-[57rem] h-[32rem] object-contain max-w-none"
-              />
-            </div>
-
-            {/* Floating elements with parallax */}
-            <div 
-              className="absolute -top-4 -right-4 bg-black text-yellow-400 p-3 rounded-full font-black text-sm animate-bounce z-20"
-              style={{ transform: `translateY(${scrollY * 0.2}px)` }}
-            >
-              HOT!
-            </div>
-            <div 
-              className="absolute -bottom-4 -left-4 bg-white text-black p-3 rounded-full font-black text-sm animate-pulse z-20"
-              style={{ transform: `translateY(${-scrollY * 0.15}px)` }}
-            >
-              FRESH!
-            </div>
-            <div 
-              className="absolute -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs z-20"
-              style={{ transform: `translateY(${scrollY * 0.1}px)`,top:"89%" }}
-            >
-              YUM!
-            </div>
-          </div>
-
-          {/* Right side - Text content */}
-          <div className="text-center lg:text-left order-2 lg:order-2">
+          
+          {/* Text content - order-1 on mobile (top), order-2 on desktop (right) */}
+          <div className="text-center lg:text-left order-1 lg:order-2">
             <div className="flex items-center justify-center lg:justify-start mb-4 animate-fade-in">
               <Zap className="text-black w-8 h-8 mr-2 animate-bounce" />
               <span className="bg-black text-yellow-400 px-4 py-1 rounded-full font-bold text-sm animate-scale-in">
@@ -96,7 +49,7 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-7xl lg:text-8xl font-black mb-6 leading-none">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 leading-none">
               <span 
                 className="block bg-black text-yellow-400 px-4 py-2 inline-block mb-2 animate-slide-in-left"
                 style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
@@ -118,10 +71,10 @@ const Hero = () => {
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
-              <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300">
+              <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-black text-base sm:text-lg shadow-2xl transform hover:scale-110 transition-all duration-300">
                 EXPLORE MENU
               </a>
-              <a href='https://www.clover.com/online-ordering/hfcyxe' className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-black">
+              <a href='https://www.clover.com/online-ordering/hfcyxe' className="bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-black text-base sm:text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-black">
                 ORDER NOW!
               </a>
             </div>
@@ -130,12 +83,71 @@ const Hero = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 text-black fill-current animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />
               ))}
-              <span className="text-black font-bold ml-2">5.0 INSANE RATING!</span>
+              <span className="text-black font-bold ml-2 text-sm sm:text-base">5.0 INSANE RATING!</span>
+            </div>
+          </div>
+
+          {/* Image section - order-2 on mobile (bottom), order-1 on desktop (left) */}
+          <div className="relative flex justify-center items-center order-2 lg:order-1">
+            {/* Circle backgrounds with parallax */}
+            <div 
+              className="absolute inset-0 flex justify-center items-center"
+              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+            >
+            </div>
+            <div 
+              className="absolute inset-0 flex justify-center items-center"
+              style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+            >
+              <div className="w-[400px] h-[300px] lg:w-[750px] lg:h-[568px] bg-yellow-300 rounded-full opacity-55"></div>
+            </div>
+            
+            {/* Desktop image - hidden on mobile */}
+            <div 
+              className="relative z-10 transform animate-float hidden lg:block"
+              style={{ transform: `translateY(${scrollY * 0.05}px)` }}
+            >
+              <img 
+                src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
+                alt="Delicious Chicken Wings on Wooden Board" 
+                className="w-[57rem] h-[32rem] object-contain max-w-none"
+              />
+            </div>
+
+            {/* Mobile image - shown only on mobile */}
+            <div 
+              className="relative z-10 transform animate-float block lg:hidden"
+              style={{ transform: `translateY(${scrollY * 0.05}px)` }}
+            >
+              <img 
+                src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
+                alt="Delicious Chicken Wings on Wooden Board" 
+                className="w-full h-auto max-w-[400px] object-contain"
+              />
+            </div>
+
+            {/* Floating elements with parallax */}
+            <div 
+              className="absolute -top-4 -right-4 bg-black text-yellow-400 p-2 sm:p-3 rounded-full font-black text-xs sm:text-sm animate-bounce z-20"
+              style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+            >
+              HOT!
+            </div>
+            <div 
+              className="absolute -bottom-4 -left-4 bg-white text-black p-2 sm:p-3 rounded-full font-black text-xs sm:text-sm animate-pulse z-20"
+              style={{ transform: `translateY(${-scrollY * 0.15}px)` }}
+            >
+              FRESH!
+            </div>
+            <div 
+              className="absolute -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs z-20"
+              style={{ transform: `translateY(${scrollY * 0.1}px)`,top:"89%" }}
+            >
+              YUM!
             </div>
           </div>
         </div>
       </div>
-
 
       {/* Static bottom banner */}
       <div className="absolute bottom-0 left-0 w-full">
