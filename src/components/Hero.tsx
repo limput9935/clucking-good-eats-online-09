@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -40,7 +39,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image with parallax effect */}
-          <div className="relative flex justify-center items-center order-2 lg:order-1">
+          <div className="relative flex justify-center items-center order-1 lg:order-1">
             {/* Circle backgrounds with parallax */}
             <div 
               className="absolute inset-0 flex justify-center items-center"
@@ -63,7 +62,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
                 alt="Delicious Chicken Wings on Wooden Board" 
-                className="w-[55rem] h-[40rem] object-contain"
+                className="w-[60rem] h-[45rem] object-contain"
               />
             </div>
 
@@ -81,25 +80,25 @@ const Hero = () => {
               FRESH!
             </div>
             <div 
-              className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs transform rotate-12 z-20"
-              style={{ transform: `translateY(${scrollY * 0.1}px) rotate(12deg)` }}
+              className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs z-20"
+              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
             >
               YUM!
             </div>
           </div>
 
           {/* Right side - Text content */}
-          <div className="text-center lg:text-left order-1 lg:order-2">
+          <div className="text-center lg:text-left order-2 lg:order-2">
             <div className="flex items-center justify-center lg:justify-start mb-4 animate-fade-in">
               <Zap className="text-black w-8 h-8 mr-2 animate-bounce" />
-              <span className="bg-black text-yellow-400 px-4 py-1 rounded-full font-bold text-sm transform -rotate-2 animate-scale-in">
+              <span className="bg-black text-yellow-400 px-4 py-1 rounded-full font-bold text-sm animate-scale-in">
                 FINGER LICKIN' GOOD!
               </span>
             </div>
             
             <h1 className="text-7xl lg:text-8xl font-black mb-6 leading-none">
               <span 
-                className="block transform -rotate-2 bg-black text-yellow-400 px-4 py-2 inline-block mb-2 animate-slide-in-left"
+                className="block bg-black text-yellow-400 px-4 py-2 inline-block mb-2 animate-slide-in-left"
                 style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
               >
                 CRISPY
@@ -111,7 +110,7 @@ const Hero = () => {
                 CHICKEN
               </span>
               <span 
-                className="block text-white transform rotate-1 animate-bounce-in"
+                className="block text-white animate-bounce-in"
                 style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
               >
                 MADNESS!
@@ -119,10 +118,10 @@ const Hero = () => {
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
-              <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:rotate-2">
+              <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300">
                 EXPLORE MENU
               </a>
-              <a href='https://www.clover.com/online-ordering/hfcyxe' className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 hover:-rotate-2 border-4 border-black">
+              <a href='https://www.clover.com/online-ordering/hfcyxe' className="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full font-black text-lg shadow-2xl transform hover:scale-110 transition-all duration-300 border-4 border-black">
                 ORDER NOW!
               </a>
             </div>
@@ -142,7 +141,7 @@ const Hero = () => {
         className="absolute bottom-0 left-0 w-full"
         style={{ transform: `translateY(${scrollY * 0.3}px)` }}
       >
-        <div className="bg-black text-yellow-400 py-4 transform -rotate-1 origin-left">
+        <div className="bg-black text-yellow-400 py-4">
           <div className="flex items-center font-black text-xl whitespace-nowrap animate-[scroll_20s_linear_infinite]">
             <span className="mx-8">CRISPY GOODNESS!</span>
             <span className="w-3 h-3 bg-yellow-400 rounded-full mx-4"></span>

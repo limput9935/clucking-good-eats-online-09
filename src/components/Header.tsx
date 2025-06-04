@@ -27,7 +27,7 @@ const Header = () => {
               alt="HFC Logo" 
               className="h-14 w-auto transform hover:scale-110 transition-transform duration-300"
             />
-            <div className="ml-2 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-sm transform -rotate-6">
+            <div className="ml-2 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-sm">
               EPIC!
             </div>
           </div>
@@ -38,7 +38,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="bg-yellow-400 text-black hover:bg-white hover:text-black px-4 py-2 rounded-full font-black text-sm transition-all duration-300 transform hover:scale-110 hover:rotate-3 border-2 border-yellow-400 shadow-lg"
+                className="bg-yellow-400 text-black hover:bg-white hover:text-black px-4 py-2 rounded-full font-black text-sm transition-all duration-300 transform hover:scale-110 border-2 border-yellow-400 shadow-lg"
               >
                 {item.name}
               </a>

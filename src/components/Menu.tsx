@@ -1,4 +1,3 @@
-
 const Menu = () => {
   const menuItems = [
     {
@@ -56,12 +55,12 @@ const Menu = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block bg-yellow-400 text-black px-6 py-2 rounded-full font-black text-sm mb-4 transform -rotate-2">
+          <div className="inline-block bg-yellow-400 text-black px-6 py-2 rounded-full font-black text-sm mb-4">
             MENU MADNESS
           </div>
           <h2 className="text-6xl font-black text-white mb-6 drop-shadow-lg">
             <span className="block">OUR CRAZY</span>
-            <span className="block text-yellow-400 transform rotate-1">CHICKEN MENU!</span>
+            <span className="block text-yellow-400">CHICKEN MENU!</span>
           </h2>
           <p className="text-xl text-white max-w-2xl mx-auto font-bold">
             Get ready for the WILDEST chicken dishes that'll make your taste buds DANCE!
@@ -70,21 +69,21 @@ const Menu = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {menuItems.map((item, index) => (
-            <div key={item.id} className={`bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 hover:rotate-2 transition-all duration-300 border-4 ${index % 2 === 0 ? 'border-yellow-400' : 'border-black'}`}>
+            <div key={item.id} className={`bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 border-4 ${index % 2 === 0 ? 'border-yellow-400' : 'border-black'}`}>
               <div className="relative overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.name}
                   className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-sm transform rotate-12">
+                <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-sm">
                   POPULAR!
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-black text-gray-800 leading-tight">{item.name}</h3>
-                  <span className="text-2xl font-black text-black bg-yellow-400 px-3 py-1 rounded-full transform -rotate-6">{item.price}</span>
+                  <span className="text-2xl font-black text-black bg-yellow-400 px-3 py-1 rounded-full">{item.price}</span>
                 </div>
                 <p className="text-gray-600 mb-6 font-semibold">{item.description}</p>
                 <div className="text-center">
@@ -98,7 +97,7 @@ const Menu = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-yellow-400 text-black py-8 px-6 rounded-3xl transform -rotate-1 shadow-2xl relative overflow-hidden">
+          <div className="bg-yellow-400 text-black py-8 px-6 rounded-3xl shadow-2xl relative overflow-hidden">
             {/* Left side chicken image */}
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden md:block">
               <img 
@@ -122,7 +121,7 @@ const Menu = () => {
               <h3 className="text-4xl font-black mb-4">HUNGRY YET?</h3>
               <p className="mb-6 font-bold text-lg">These dishes are CALLING your name!</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 hover:rotate-3 border-4 border-black">
+                <button className="bg-black text-yellow-400 hover:bg-gray-800 px-12 py-4 rounded-full font-black text-xl transition-all duration-200 transform hover:scale-110 border-4 border-black">
                   LET'S ORDER!
                 </button>
                 <div className="flex items-center space-x-2">

@@ -1,4 +1,3 @@
-
 const Gallery = () => {
   const galleryImages = [
     {
@@ -44,12 +43,12 @@ const Gallery = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block bg-black text-yellow-400 px-6 py-2 rounded-full font-black text-sm mb-4 transform rotate-2">
+          <div className="inline-block bg-black text-yellow-400 px-6 py-2 rounded-full font-black text-sm mb-4">
             PHOTO GALLERY
           </div>
           <h2 className="text-6xl font-black text-black mb-6 drop-shadow-lg">
             <span className="block">FEAST YOUR</span>
-            <span className="block text-yellow-500 transform -rotate-1">EYES!</span>
+            <span className="block text-yellow-500">EYES!</span>
           </h2>
           <p className="text-xl text-black max-w-2xl mx-auto font-bold">
             Warning: These photos might cause EXTREME hunger! View at your own risk!
@@ -58,7 +57,7 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryImages.map((image, index) => (
-            <div key={image.id} className={`group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 ${index % 3 === 0 ? 'hover:rotate-3' : index % 3 === 1 ? 'hover:-rotate-3' : 'hover:rotate-1'} border-4 border-black`}>
+            <div key={image.id} className={`group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 border-4 border-black`}>
               <img 
                 src={image.src} 
                 alt={image.alt}
@@ -72,7 +71,7 @@ const Gallery = () => {
                 </div>
               </div>
               {index % 2 === 0 && (
-                <div className="absolute top-4 right-4 bg-black text-yellow-400 px-2 py-1 rounded-full font-black text-xs transform rotate-12 animate-bounce">
+                <div className="absolute top-4 right-4 bg-black text-yellow-400 px-2 py-1 rounded-full font-black text-xs animate-bounce">
                   WOW!
                 </div>
               )}
@@ -81,7 +80,7 @@ const Gallery = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-black text-yellow-400 py-8 px-6 rounded-3xl transform rotate-1 shadow-2xl border-4 border-yellow-400">
+          <div className="bg-black text-yellow-400 py-8 px-6 rounded-3xl shadow-2xl border-4 border-yellow-400">
             <h3 className="text-4xl font-black mb-4">SHARE THE MADNESS!</h3>
             <p className="mb-6 font-bold text-lg">Tag us in your chicken adventures!</p>
             <div className="flex justify-center space-x-4">
