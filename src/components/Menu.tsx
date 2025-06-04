@@ -6,7 +6,7 @@ const Menu = () => {
       description: "💥 Golden crispy chicken pieces with our SECRET spice blend that'll blow your mind!",
       price: "$12.99",
       emoji: "🔥",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      image: "https://www.licious.in/blog/wp-content/uploads/2019/05/Drumsticks-liquidation-plan-05.jpg"
     },
     {
       id: 2,

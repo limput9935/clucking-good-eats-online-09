@@ -1,41 +1,86 @@
-
-import { Star, Heart, ThumbsUp } from 'lucide-react';
+import { Star, Heart } from 'lucide-react';
 
 const Reviews = () => {
   const reviews = [
     {
       id: 1,
-      name: "Sarah the Chicken Queen",
+      name: "Sarah K",
       rating: 5,
-      comment: "OMG! This place is INSANE! The crispy chicken literally made me cry tears of joy! I'm OBSESSED! 😭🔥",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c9d4b0e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      emoji: "👸"
+      comment: "Ordered Hot Chicken for the first time and it was delicious! The yam fries were yummy too. We’ll definitely order again and try more flavours.",
+      location: "Saskatoon, Canada"
     },
     {
       id: 2,
-      name: "Mike the Flavor Hunter",
+      name: "Mike R",
       rating: 5,
-      comment: "DUDE! These buffalo wings are from another PLANET! My taste buds are still dancing! This is MADNESS! 🕺💀",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      emoji: "🕺"
+      comment: "DUDE! These buffalo wings are from another PLANET! My taste buds are still dancing",
+      location: "Martensville, Canada"
     },
     {
       id: 3,
-      name: "Emily the Food Goddess",
+      name: "Yuki L.",
       rating: 5,
       comment: "I've found my HAPPY PLACE! The chicken tenders are LIFE-CHANGING! My family thinks I'm crazy but WHO CARES?! 🤪⚡",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      emoji: "🤪"
+      location: "Warman, Canada"
+    },
+    {
+      id: 4,
+      name: "Alex P.",
+      rating: 5,
+      comment: "Best fried chicken in the area! Worth the short drive from Osler.",
+      location: "Osler, Canada"
+    },
+    {
+      id: 5,
+      name: "Priya S.",
+      rating: 5,
+      comment: "Super crispy and juicy! The honey garlic sauce is a must-try. Delivery was quick too.",
+      location: "Saskatoon, Canada"
+    },
+    {
+      id: 6,
+      name: "Jordan T.",
+      rating: 5,
+      comment: "The Nashville Hot is the real deal! Spicy, crunchy, and addictive. 10/10 would recommend.",
+      location: "Martensville, Canada"
+    },
+    {
+      id: 7,
+      name: "Emily W.",
+      rating: 5,
+      comment: "I can't stop thinking about the loaded fries. Portions are generous and the staff is super friendly!",
+      location: "Warman, Canada"
+    },
+    {
+      id: 8,
+      name: "Carlos M.",
+      rating: 5,
+      comment: "Great value for money. The chicken sandwich was massive and packed with flavor.",
+      location: "Saskatoon, Canada"
+    },
+    {
+      id: 9,
+      name: "Linda G.",
+      rating: 5,
+      comment: "My kids LOVED the popcorn chicken. We’ll be back every week!",
+      location: "Osler, Canada"
+    },
+    {
+      id: 10,
+      name: "Samir D.",
+      rating: 5,
+      comment: "Absolutely blown away by the taste and crunch. This place is a hidden gem!",
+      location: "Martensville, Canada"
     }
   ];
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, index) => (
-      <Star 
-        key={index} 
-        size={24} 
-        className={`${index < rating ? 'text-yellow-400 fill-current animate-pulse' : 'text-gray-300'}`} 
-        style={{animationDelay: `${index * 0.1}s`}}
+      <Star
+        key={index}
+        size={24}
+        className={`${index < rating ? 'text-yellow-400 fill-current animate-pulse' : 'text-gray-300'}`}
+        style={{ animationDelay: `${index * 0.1}s` }}
       />
     ));
   };
@@ -58,43 +103,43 @@ const Reviews = () => {
           </div>
           <h2 className="text-6xl font-black text-black mb-6 drop-shadow-lg">
             <span className="block">PEOPLE ARE</span>
-            <span className="block text-white transform rotate-1">GOING CRAZY! 🤯</span>
+            <span className="block text-white transform rotate-1">GOING CRAZY! </span>
           </h2>
           <p className="text-xl text-black max-w-2xl mx-auto font-bold">
-            Don't believe us? Check out these WILD reactions from our customers! 
+            Don't believe us? Check out these WILD reactions from our customers!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
-            <div key={review.id} className={`bg-white rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 ${index % 2 === 0 ? 'hover:rotate-2' : 'hover:-rotate-2'} border-4 border-black`}>
-              <div className="flex items-center mb-4">
-                <div className="relative">
-                  <img 
-                    src={review.image} 
-                    alt={review.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-yellow-400"
-                  />
-                  <div className="absolute -top-2 -right-2 bg-black text-yellow-400 p-1 rounded-full text-lg animate-bounce">
-                    {review.emoji}
+        {/* Horizontal Infinite Auto Scroll */}
+        <div className="relative w-full overflow-x-hidden">
+          <div
+            className="flex items-stretch gap-8 animate-scroll-reviews"
+            style={{
+              width: 'max-content',
+              animation: 'scroll-reviews 40s linear infinite'
+            }}
+          >
+            {[...reviews, ...reviews].map((review, index) => (
+              <div
+                key={index}
+                style={{maxWidth: '400px'}}
+                className={"bg-white rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 transform border-4 border-black min-w-[340px] flex-shrink-0"}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="ml-4 flex-1">
+                    <h3 className="font-black text-gray-800 text-lg">{review.name}</h3>
+                    <span className="text-black font-bold text-sm">{review.location}</span>
+                    <div className="flex mb-2">
+                      {renderStars(review.rating)}
+                    </div>
                   </div>
                 </div>
-                <div className="ml-4 flex-1">
-                  <h3 className="font-black text-gray-800 text-lg">{review.name}</h3>
-                  <div className="flex mb-2">
-                    {renderStars(review.rating)}
-                  </div>
-                  <div className="flex items-center">
-                    <ThumbsUp className="w-4 h-4 text-black mr-1" />
-                    <span className="text-black font-bold text-sm">VERIFIED CRAZY CUSTOMER</span>
-                  </div>
+                <div className="bg-gray-100 p-4 rounded-2xl">
+                  <p className="text-gray-800 font-bold italic text-lg leading-relaxed">"{review.comment}"</p>
                 </div>
               </div>
-              <div className="bg-gray-100 p-4 rounded-2xl">
-                <p className="text-gray-800 font-bold italic text-lg leading-relaxed">"{review.comment}"</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-16">
@@ -116,6 +161,16 @@ const Reviews = () => {
           </div>
         </div>
       </div>
+      {/* Add the keyframes for the scroll animation */}
+      <style>{`
+        @keyframes scroll-reviews {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-reviews {
+          will-change: transform;
+        }
+      `}</style>
     </section>
   );
 };
