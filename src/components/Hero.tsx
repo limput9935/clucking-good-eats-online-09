@@ -38,23 +38,23 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Image with parallax effect */}
+          {/* Left side - Image with larger size */}
           <div className="relative flex justify-center items-center order-1 lg:order-1">
             {/* Circle backgrounds with parallax */}
             <div 
               className="absolute inset-0 flex justify-center items-center"
               style={{ transform: `translateY(${scrollY * 0.1}px)` }}
             >
-              <div className="w-[600px] h-[600px] bg-white rounded-full opacity-30"></div>
+              <div className="w-[800px] h-[800px] bg-white rounded-full opacity-30"></div>
             </div>
             <div 
               className="absolute inset-0 flex justify-center items-center"
               style={{ transform: `translateY(${scrollY * 0.15}px)` }}
             >
-              <div className="w-[550px] h-[550px] bg-yellow-300 rounded-full opacity-40"></div>
+              <div className="w-[750px] h-[750px] bg-yellow-300 rounded-full opacity-40"></div>
             </div>
             
-            {/* Main image container with parallax */}
+            {/* Main image container with much larger size */}
             <div 
               className="relative z-10 transform animate-float"
               style={{ transform: `translateY(${scrollY * 0.05}px)` }}
@@ -62,7 +62,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/fda970c7-51aa-483a-9b38-a90d43c01e56.png" 
                 alt="Delicious Chicken Wings on Wooden Board" 
-                className="w-[60rem] h-[45rem] object-contain"
+                className="w-[80rem] h-[60rem] object-contain max-w-none"
               />
             </div>
 
