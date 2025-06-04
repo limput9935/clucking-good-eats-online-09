@@ -1,6 +1,12 @@
+
 import { Star, Heart } from 'lucide-react';
+import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
 const Reviews = () => {
+  const { isVisible: headerVisible, elementRef: headerRef } = useScrollTrigger();
+  const { isVisible: reviewsVisible, elementRef: reviewsRef } = useScrollTrigger();
+  const { isVisible: ctaVisible, elementRef: ctaRef } = useScrollTrigger();
+
   const reviews = [
     {
       id: 1,
@@ -85,7 +91,11 @@ const Reviews = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div ref={headerRef} className={`text-center mb-16 transition-all duration-1000 ${
+          headerVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-10'
+        }`}>
           <div className="inline-flex items-center bg-white text-black px-6 py-3 rounded-full font-black text-sm mb-4">
             <Heart className="w-5 h-5 mr-2 text-black animate-pulse" />
             CUSTOMER LOVE LETTERS
@@ -101,7 +111,11 @@ const Reviews = () => {
         </div>
 
         {/* Horizontal Infinite Auto Scroll */}
-        <div className="relative w-full overflow-x-hidden">
+        <div ref={reviewsRef} className={`relative w-full overflow-x-hidden transition-all duration-1000 delay-300 ${
+          reviewsVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-10'
+        }`}>
           <div
             className="flex items-stretch gap-8 animate-scroll-reviews"
             style={{
@@ -131,7 +145,11 @@ const Reviews = () => {
           </div>
         </div>
 
-        <div className="text-center mt-16">
+        <div ref={ctaRef} className={`text-center mt-16 transition-all duration-1000 delay-600 ${
+          ctaVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-10'
+        }`}>
           <div className="bg-black text-yellow-400 py-10 px-8 rounded-3xl shadow-2xl border-4 border-black">
             <h3 className="text-4xl font-black mb-4">JOIN THE CHICKEN REVOLUTION!</h3>
             <p className="mb-6 font-bold text-xl">Become part of our CRAZY chicken family!</p>

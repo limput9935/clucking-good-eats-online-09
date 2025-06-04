@@ -1,4 +1,11 @@
+
+import { useScrollTrigger } from '../hooks/useScrollTrigger';
+
 const Gallery = () => {
+  const { isVisible: headerVisible, elementRef: headerRef } = useScrollTrigger();
+  const { isVisible: gridVisible, elementRef: gridRef } = useScrollTrigger();
+  const { isVisible: ctaVisible, elementRef: ctaRef } = useScrollTrigger();
+
   const galleryImages = [
     {
       id: 1,
@@ -42,7 +49,11 @@ const Gallery = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div ref={headerRef} className={`text-center mb-16 transition-all duration-1000 ${
+          headerVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-10'
+        }`}>
           <div className="inline-block bg-black text-yellow-400 px-6 py-2 rounded-full font-black text-sm mb-4">
             PHOTO GALLERY
           </div>
@@ -55,7 +66,11 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={gridRef} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
+          gridVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-10'
+        }`}>
           {galleryImages.map((image, index) => (
             <div key={image.id} className={`group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 border-4 border-black`}>
               <img 
@@ -79,7 +94,11 @@ const Gallery = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div ref={ctaRef} className={`text-center mt-16 transition-all duration-1000 delay-600 ${
+          ctaVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-10'
+        }`}>
           <div className="bg-black text-yellow-400 py-8 px-6 rounded-3xl shadow-2xl border-4 border-yellow-400">
             <h3 className="text-4xl font-black mb-4">SHARE THE MADNESS!</h3>
             <p className="mb-6 font-bold text-lg">Tag us in your chicken adventures!</p>

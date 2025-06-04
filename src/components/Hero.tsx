@@ -1,8 +1,12 @@
 import { ArrowDown, Zap, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const { isVisible: titleVisible, elementRef: titleRef } = useScrollTrigger();
+  const { isVisible: buttonsVisible, elementRef: buttonsRef } = useScrollTrigger();
+  const { isVisible: ratingVisible, elementRef: ratingRef } = useScrollTrigger();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -48,28 +52,47 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 leading-none">
-              <span 
-                className="block bg-black text-yellow-400 px-4 py-2 inline-block mb-2 animate-slide-in-left"
-                style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
-              >
-                CRISPY
-              </span>
-              <span 
-                className="block text-black drop-shadow-lg animate-slide-in-right"
-                style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
-              >
-                CHICKEN
-              </span>
-              <span 
-                className="block text-white animate-bounce-in"
-                style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
-              >
-                MADNESS!
-              </span>
-            </h1>
+            <div ref={titleRef}>
+              <h1 className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 leading-none transition-all duration-1000 ${
+                titleVisible 
+                  ? 'opacity-100 transform translate-y-0' 
+                  : 'opacity-0 transform translate-y-10'
+              }`}>
+                <span 
+                  className={`block bg-black text-yellow-400 px-4 py-2 inline-block mb-2 transition-all duration-700 delay-200 ${
+                    titleVisible 
+                      ? 'opacity-100 transform translate-x-0' 
+                      : 'opacity-0 transform -translate-x-20'
+                  }`}
+                >
+                  CRISPY
+                </span>
+                <span 
+                  className={`block text-black drop-shadow-lg transition-all duration-700 delay-400 ${
+                    titleVisible 
+                      ? 'opacity-100 transform translate-x-0' 
+                      : 'opacity-0 transform translate-x-20'
+                  }`}
+                >
+                  CHICKEN
+                </span>
+                <span 
+                  className={`block text-white transition-all duration-700 delay-600 ${
+                    titleVisible 
+                      ? 'opacity-100 transform scale-100' 
+                      : 'opacity-0 transform scale-75'
+                  }`}
+                >
+                  MADNESS!
+                </span>
+              </h1>
+            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
+            <div ref={buttonsRef} className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-800 delay-800 ${
+              buttonsVisible 
+                ? 'opacity-100 transform translate-y-0' 
+                : 'opacity-0 transform translate-y-10'
+            }`}>
               <a href='#menu' className="bg-black hover:bg-gray-800 text-yellow-400 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-black text-base sm:text-lg shadow-2xl transform hover:scale-110 transition-all duration-300">
                 EXPLORE MENU
               </a>
@@ -78,7 +101,11 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start mt-8 space-x-2 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
+            <div ref={ratingRef} className={`flex items-center justify-center lg:justify-start mt-8 space-x-2 transition-all duration-800 delay-1000 ${
+              ratingVisible 
+                ? 'opacity-100 transform translate-y-0' 
+                : 'opacity-0 transform translate-y-10'
+            }`}>
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 text-black fill-current animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />
               ))}
