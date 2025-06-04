@@ -45,13 +45,13 @@ const Hero = () => {
               className="absolute inset-0 flex justify-center items-center"
               style={{ transform: `translateY(${scrollY * 0.1}px)` }}
             >
-              <div className="w-[800px] h-[800px] bg-white rounded-full opacity-30"></div>
+              {/* <div className="w-[700px] h-[800px] bg-white rounded-full opacity-30"></div> */}
             </div>
             <div 
               className="absolute inset-0 flex justify-center items-center"
               style={{ transform: `translateY(${scrollY * 0.15}px)` }}
             >
-              <div className="w-[750px] h-[750px] bg-yellow-300 rounded-full opacity-40"></div>
+              <div className="w-[750px] h-[568px] bg-yellow-300 rounded-full opacity-55"></div>
             </div>
             
             {/* Main image container with much larger size */}
@@ -79,12 +79,12 @@ const Hero = () => {
             >
               FRESH!
             </div>
-            {/* <div 
-              className="absolute top-1/2 -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs z-20"
-              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+            <div 
+              className="absolute -right-8 bg-black text-yellow-400 p-2 rounded-full font-black text-xs z-20"
+              style={{ transform: `translateY(${scrollY * 0.1}px)`,top:"89%" }}
             >
               YUM!
-            </div> */}
+            </div>
           </div>
 
           {/* Right side - Text content */}
